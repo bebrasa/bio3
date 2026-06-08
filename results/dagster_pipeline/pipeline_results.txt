@@ -1,0 +1,29 @@
+Dagster mapping QC pipeline — результат на реальных данных
+==========================================================
+
+Данные:
+  SRA: SRR39004285 (ONT WGS, Escherichia coli, GridION)
+  Ссылка: https://trace.ncbi.nlm.nih.gov/Traces/?run=SRR39004285
+  Референс: GCF_000005845.2 (E. coli K-12 MG1655)
+
+Инструменты:
+  Платформа: Oxford Nanopore (MinION/GridION/PromethION)
+  Картирование: minimap2 -ax map-ont
+  Фреймворк: Dagster
+
+Результат оценки качества картирования:
+  Mapped reads: 89.62%
+  Threshold: 90.00%
+  Status: not OK
+
+Пояснение:
+  Доля картированных ридов чуть ниже порога 90%, поэтому ветка
+  variant_calling (samtools sort + freebayes) была пропущена — это
+  соответствует алгоритму из задания.
+
+Выходные файлы:
+  results/dagster_pipeline/SRR39004285.flagstat.txt
+  results/dagster_pipeline/SRR39004285_qc_summary.txt
+  results/dagster_pipeline/fastqc/ (FastQC отчёты)
+
+Лог выполнения: logs/dagster_mapping_qc.log

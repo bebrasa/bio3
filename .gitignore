@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.DS_Store
+
+# Большие данные — скачиваются скриптом download_data.sh
+data/reads/
+data/reference/*.fna
+data/reference/*.gz
+data/reference/*.mmi
+
+# Большие промежуточные файлы пайплайна
+results/**/*.sam
+results/**/*.bam
+results/**/*.bai
+results/**/*.vcf
+
+*.log
+.tmp_dagster_home*/

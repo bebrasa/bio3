@@ -1,0 +1,15 @@
+Hello World Dagster pipeline — результат выполнения
+====================================================
+
+Команда:
+  dagster asset materialize -m dagster_project.definitions \
+    --select hello_world_message,hello_world_greeting
+
+Результат hello_world_message:
+  Hello, Dagster! Bioinformatics pipeline is ready.
+
+Результат hello_world_greeting:
+  Hello, Dagster! Bioinformatics pipeline is ready. Framework: Dagster. Mapper: minimap2. Platform: ONT.
+
+Статус: RUN_SUCCESS
+Лог: logs/dagster_hello_world.log

@@ -1,0 +1,15 @@
+[project]
+name = "bioinf-hw3"
+version = "0.1.0"
+description = "Homework 3: mapping QC pipeline with minimap2 and Dagster"
+requires-python = ">=3.10"
+dependencies = [
+    "dagster>=1.9",
+    "dagster-webserver>=1.9",
+]
+
+[tool.setuptools.packages.find]
+include = ["dagster_project*"]
+
+[tool.dagster]
+module_name = "dagster_project.definitions"
